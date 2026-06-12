@@ -1,0 +1,11 @@
+{
+  "description": "Cronjob định kỳ lấy thông tin bộ nhớ và đĩa báo cáo cho Agent",
+  "display_name": "System Health Checker",
+  "builtin": "schedule",
+  "args": [
+    "*/30 * * * *",
+    "agentapi",
+    "new-conversation",
+    "Báo cáo định kỳ: Hệ thống vẫn hoạt động bình thường, hãy tóm tắt tình hình cho tôi."
+  ]
+}

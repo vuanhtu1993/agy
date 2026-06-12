@@ -1,0 +1,44 @@
+<h2>Cấu trúc Giao diện (Layout) cho Cookbook</h2>
+<p class="subtitle">Với dạng Cookbook, việc tổ chức không gian để đọc hiểu vấn đề và tra cứu code cực kỳ quan trọng. Hãy chọn layout phù hợp nhất:</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Layout Truyền Thống (2 Cột)</h3>
+      <p>Sidebar bên trái chứa danh sách các "Vấn đề". Bên phải là không gian rộng rãi để giải thích vấn đề, nguyên nhân cốt lõi (Root Cause) và giải pháp.</p>
+      <div style="margin-top: 15px; border: 1px dashed #666; padding: 10px; display: flex; gap: 10px; height: 100px;">
+        <div style="width: 25%; background: #333; border-radius: 4px; padding: 5px; font-size: 10px; color: #aaa;">
+          - Setup<br>- Workflow<br>- Debugging
+        </div>
+        <div style="width: 75%; background: #222; border-radius: 4px; padding: 5px; font-size: 10px; color: #aaa;">
+          <b>Vấn đề: ...</b><br>
+          Nguyên nhân: ...<br>
+          <i>[Code Snippet]</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Layout Kiểu API / Thực Chiến (3 Cột)</h3>
+      <p>Sidebar trái: Mục lục. Cột giữa: Lý thuyết, Định nghĩa (What) & Đánh đổi (Trade-offs). Cột phải: Chỉ dành riêng cho Code snippet, CLI command & Demo thực tế.</p>
+      <div style="margin-top: 15px; border: 1px dashed #666; padding: 10px; display: flex; gap: 10px; height: 100px;">
+        <div style="width: 20%; background: #333; border-radius: 4px; padding: 5px; font-size: 10px; color: #aaa;">
+          - Setup<br>- Workflow
+        </div>
+        <div style="width: 40%; background: #222; border-radius: 4px; padding: 5px; font-size: 10px; color: #aaa;">
+          <b>Khái niệm</b><br>
+          Trade-off: ...<br>
+          Why: ...
+        </div>
+        <div style="width: 40%; background: #1a1a2e; border-radius: 4px; padding: 5px; font-size: 10px; color: #4ade80; font-family: monospace;">
+          $ antigravity run<br>
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

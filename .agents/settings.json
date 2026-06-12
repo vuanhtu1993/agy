@@ -1,0 +1,17 @@
+{
+  "enableTerminalSandbox": true,
+  "toolPermission": "request-review",
+  "permissions": {
+    "allow": [
+      "command(git status)",
+      "command(npm test)",
+      "read_file(./)",
+      "write_file(./src/)",
+      "write_file(./docs/)"
+    ],
+    "deny": [
+      "command(rm -rf)",
+      "command(sudo)"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "lint-after-write": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Run Linter Hook (Demo): Linter passed!'",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "prevent-large-reads": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "view_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'jq -r .toolCall.args.AbsolutePath | grep -q \"node_modules\" && echo \"{\\\"decision\\\": \\\"deny\\\", \\\"reason\\\": \\\"Không được đọc file trong node_modules\\\"}\" || echo \"{\\\"decision\\\": \\\"allow\\\"}\"'"
+          }
+        ]
+      }
+    ]
+  }
+}
